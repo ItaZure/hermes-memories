@@ -17,3 +17,5 @@ Technical preferences: Uses pipx for Python package management (prefers isolated
 沟通偏好：简洁回复、有据可依、优先使用一手资料。会主动纠正不准确的回答（如要求"看官方文档，别乱答"），要求基于官方/一手资料而非推测。
 §
 沟通：喜欢一步步指导，不要一次给太多信息。
+§
+test
