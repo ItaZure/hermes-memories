@@ -7,10 +7,8 @@ IMPORTANT: Only run the script corresponding to the current active model/provide
 §
 User prefers automation and hooks for repetitive tasks. Interested in setting up automated workflows (asked about hook mechanism for automatic balance checking). This suggests they value efficiency and minimal manual steps in their workflow.
 §
-Technical preferences: Uses pipx for Python package management (prefers isolated environments), uses nvm for Node.js version management. When helping with Python packages installed via pipx, should use the pipx venv Python path rather than system Python.
+Commands must include sudo when needed (user dislikes manual addition). Uses pipx and nvm for package management. Prefers isolated environments.
 §
 公司：望安科技 (Wonsec)
 §
-沟通：喜欢一步步指导，不要一次给太多信息。
-§
-test
+Communication style: Prefers step-by-step instructions, not too much information at once. Wants commands to include sudo upfront, not added manually later.
