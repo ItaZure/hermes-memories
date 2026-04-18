@@ -1,5 +1,3 @@
-Kimi balance check script is at ~/hermes-files/kimi_balance.py. Requires MOONSHOT_API_KEY or KIMI_API_KEY environment variable to be set from https://platform.kimi.com/settings/api-keys. Remember to run it after every task completion.
-§
 When creating PPTs with pptxgenjs in JavaScript, need to be careful with quote escaping - use single quotes for strings containing double quotes (e.g., 'text with "quotes"') or escape properly to avoid SyntaxError.
 §
 Hermes overriding base url warning: Even if base url is set in config.yaml under the model block, the kimi-coding provider internal logic might override it using environment defaults. For legacy Moonshot keys you MUST explicitly set KIMI_BASE_URL to api.moonshot.cn/v1 in the environment to force the correct endpoint. Kimi k2.5 also strictly requires temperature 1.0.
@@ -33,6 +31,4 @@ Infrastructure setup:
 - 笔记本常休眠，NAS常开
 - 两边通常不在同一子网
 §
-When Poe API fails with 403 Forbidden (Cloudflare protection), even with valid API key and working proxy, the issue is Cloudflare's "I'm under attack" mode blocking automated requests. Solution requires browser automation (Playwright) or official SDK, not just proxy configuration.
-§
-Poe API troubleshooting: 403 Forbidden with valid API key + working proxy = Cloudflare "I'm under attack" protection blocking automated requests. Solution requires browser automation (Playwright) or official SDK, not proxy config. Clash Verge default: mixed-port 7897 (HTTP/SOCKS5), socks-port 7898, port 7899.
+自定义API提供商调试（如Poe API）：当使用config.yaml中的providers配置自定义提供商时，Hermes内部存在硬编码问题。runtime_provider.py会将provider名称硬编码为"custom"，并在_openrouter_runtime中限制base_url使用。调试时发现：1) Hermes无法识别"poe"为内置provider，导致resolve_provider抛出AuthError；2) _resolve_named_custom_runtime总是返回"custom"作为provider名称；3) _try_resolve_from_custom_pool接收硬编码的"custom"标签；4) _resolve_openrouter_runtime仅在requested_norm=="custom"时使用config中的base_url。修复这三个位置的代码后，Poe API可正常工作：model_cfg字段必须存在，且provider字段必须匹配providers下的自定义provider名称。
