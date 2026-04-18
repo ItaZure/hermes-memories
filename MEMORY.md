@@ -2,8 +2,6 @@ Kimi balance check script is at ~/hermes-files/kimi_balance.py. Requires MOONSHO
 §
 When creating PPTs with pptxgenjs in JavaScript, need to be careful with quote escaping - use single quotes for strings containing double quotes (e.g., 'text with "quotes"') or escape properly to avoid SyntaxError.
 §
-File organization preference: All files created by Hermes should be placed in ~/hermes-files/ directory. This includes scripts, extracted data, PPTs, and any other output files. Check this folder first when looking for previously created files.
-§
 Hermes overriding base url warning: Even if base url is set in config.yaml under the model block, the kimi-coding provider internal logic might override it using environment defaults. For legacy Moonshot keys you MUST explicitly set KIMI_BASE_URL to api.moonshot.cn/v1 in the environment to force the correct endpoint. Kimi k2.5 also strictly requires temperature 1.0.
 §
 User's NAS is running fnOS v1.1.26 (飞牛).
@@ -34,3 +32,7 @@ Infrastructure setup:
 - 使用Tailscale打通跨子网访问
 - 笔记本常休眠，NAS常开
 - 两边通常不在同一子网
+§
+When Poe API fails with 403 Forbidden (Cloudflare protection), even with valid API key and working proxy, the issue is Cloudflare's "I'm under attack" mode blocking automated requests. Solution requires browser automation (Playwright) or official SDK, not just proxy configuration.
+§
+Poe API troubleshooting: 403 Forbidden with valid API key + working proxy = Cloudflare "I'm under attack" protection blocking automated requests. Solution requires browser automation (Playwright) or official SDK, not proxy config. Clash Verge default: mixed-port 7897 (HTTP/SOCKS5), socks-port 7898, port 7899.
