@@ -1,16 +1,11 @@
-User is a Product Manager. Primary workstation OS is macOS. Uses Hermes for product planning, brainstorming, prototyping, and automated market/competitor research. Prefers structured Markdown documents for output over code. Focuses on product strategy and PRDs.
+办公地点在绍兴（不是北京）。从事产品线工作，经常需要出差参加开标/演示（如去扬州等地）。工作能力很强，但在感情上容易内耗，有一个品牌部的同事叫思佳（Sijia），从2025年9月表白后被回避至今，仍然有"飞蛾扑火"的冲动。用户高度自省，日记里经常分析自己的情绪模式，能察觉到工作里的自己和感情里的自己状态截然不同——工作中是建设者、理性拆解，感情中失控、反复内耗。喜欢被倾听而非给建议，会用日记记录感悟。
 §
-After completing any task or response, automatically check and display:
-1. Kimi API balance (python3 ~/hermes-files/kimi_balance.py) IF the active model is Kimi/Moonshot.
-2. OpenRouter API balance (python3 ~/hermes-files/openrouter_balance.py) IF the active provider is OpenRouter.
-IMPORTANT: Only run the script corresponding to the current active model/provider. If unsure, check the current context before running.
+When sharing emotional or stressful experiences, the user wants accurate mirroring of their actual framing — not amplification or dramatization. If they say "等的有点无聊," don't reframe it as "撑了一整天." Match their level, not yours. They'll tell you if it's bigger than they're letting on.
 §
-User prefers automation and hooks for repetitive tasks. Interested in setting up automated workflows (asked about hook mechanism for automatic balance checking). This suggests they value efficiency and minimal manual steps in their workflow.
+办公室在绍兴，不是北京。经常在江浙一带出差（扬州等地）。公司叫望安，做产品 CaaS/CCLab，主要面向军工客户（706所、赛迪等）。
 §
-Commands must include sudo when needed (user dislikes manual addition). Uses pipx and nvm for package management. Prefers isolated environments.
+对同事思佳（品牌部）有未果的感情，已持续大半年。她对他明显回避：不合群沟通工作请求（通过崔刚转达）、独处时声音发抖、群里对别人活泼对他沉默。用户已接受这个现实但在某些时刻仍会被触发。在咨询中讨论过这段关系。
 §
-公司：望安科技 (Wonsec)
+用户不喜欢被强行在不同生活领域之间做心理模式的类比（例如把浇水焦虑类比感情模式）。他在感情里的焦虑是被对方的回避激发出来的，不是内在的性格模式。解读他的情绪时不要套用"所有事情都是同一个内在模式的投射"的框架，要相信他的自我判断。
 §
-Communication style: Prefers step-by-step instructions, not too much information at once. Wants commands to include sudo upfront, not added manually later.
-§
-用户使用Hermes的主要场景：NAS作为24/7聊天服务器对接微信/飞书，MacBook处理本地文件和终端操作。需要两边记忆数据同步。
+用户是头马（Toastmasters）会员，做过备稿评估。核心理念：真正打动人的是人类用执念对抗数学的时刻——脆弱、混乱但坚韧的情感。2025年11月9日日记中有详细记载。朋友钱铁铮（钱老师）住在余杭，有写作能力也有意愿，用户考虑找他做写作编辑/对话者。
